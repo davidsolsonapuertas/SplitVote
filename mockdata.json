@@ -1,0 +1,41 @@
+{
+  "Users": [
+    {
+      "username": "Andrew Spencer",
+      "pet": ["dog"],
+      "picture": ""
+    },
+    {
+      "username": "Raj Raghrum",
+      "pet": ["cat"],
+      "picture": ""
+    },
+    {
+      "username": "Mary Peters",
+      "pet": ["dog"],
+      "picture": ""
+    }
+  ],
+  "Weekdays": [
+    {
+      "day": "Monday",
+      "bookings": []
+    },
+    {
+      "day": "Tuesday",
+      "bookings": []
+    },
+    {
+      "day": "Wednesday",
+      "bookings": []
+    },
+    {
+      "day": "Thursday",
+      "bookings": []
+    },
+    {
+      "day": "Friday",
+      "bookings": []
+    }
+  ]
+}
