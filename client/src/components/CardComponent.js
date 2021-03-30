@@ -1,23 +1,15 @@
 import React from 'react';
 import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
 
-function Card({ user }) {
-  // const onDragStart = (e) => {
-  //   const target = e.target;
+import { deleteUser } from '../service/ModifyDataService';
 
-  //   e.dataTransfer.setData('card_id', target.id);
-
-  //   setTimeout(() => {
-  //     target.style.display = 'none';
-  //   }, 0);
-  // };
-
-  // const onDragOver = (e) => {
-  //   e.stopPropagation();
-  // };
+function Card({ user, setData }) {
   return (
     <div draggable key={user.username} className='card'>
-      <div className='icondiv'>
+      <div
+        className='icondiv'
+        onClick={() => deleteUser(user.username, setData)}
+      >
         <ClearRoundedIcon fontSize='large' className='icon' />
       </div>
       <div className='cardbody'>

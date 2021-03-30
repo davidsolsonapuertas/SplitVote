@@ -9,6 +9,11 @@ h3 {
   color: #444;
 }
 
+.App {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .header {
   background-color: #ff4d41;
   display: flex;
@@ -30,7 +35,7 @@ h3 {
   align-items: flex-start;
 }
 
-.dashboard h1 {
+.dashboard h2 {
   text-align: center;
   margin-top: 30px;
 }
@@ -51,18 +56,22 @@ h3 {
 
 .weekdays {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-wrap: wrap;
+  min-width: 50%;
   margin-top: 20px;
+  justify-content: center;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .weekday {
   min-height: 200px;
+  min-width: 200px;
   background-color: #ff4d41;
   border-radius: 20px;
   margin: 10px 10px 10px 10px;
   text-align: center;
+  overflow-x: hidden;
 }
 
 .weekday p {
@@ -95,6 +104,15 @@ h3 {
   border-radius: 50%;
 }
 
+.addclient {
+  margin-top: 40px;
+}
+
+.addclient .iconplus {
+  color: #ff4d41;
+  font-size: 70;
+}
+
 .cardinfo {
   text-align: center;
 }
@@ -102,4 +120,8 @@ h3 {
 .icon {
   float: right;
   color: rgb(150, 150, 150);
+}
+
+.dragging {
+  opacity: 40%;
 }
