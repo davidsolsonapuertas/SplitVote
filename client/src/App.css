@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+/* #ff4d41 */
+p,
+h1,
+h2,
+h3 {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  color: #444;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: #ff4d41;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.headericon {
+  color: white;
+  margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dashboard {
+  display: flex;
+  align-items: flex-start;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.logoheader {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.unordered {
+  min-width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 20px 20px 20px;
+}
+
+.weekdays {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.weekday {
+  min-height: 200px;
+  background-color: #ff4d41;
+  border-radius: 20px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+}
+
+.weekday p {
+  margin-top: 10px;
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 15px 15px 15px;
+  border: 1px solid #444;
+  color: black;
+}
+
+.cardbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilepic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.cardinfo {
+  text-align: center;
+}
+
+.icon {
+  float: right;
+  color: rgb(150, 150, 150);
 }
