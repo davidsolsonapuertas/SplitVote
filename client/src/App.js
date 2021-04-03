@@ -48,7 +48,7 @@ function App() {
         key={user.username}
         onDragStart={(e) => onDragStart(e, { user, userIndex })}
       >
-        <Card user={user} setData={setData} />
+        <Card user={user} userIndex={userIndex} setData={setData} />
       </div>
     );
   };
@@ -63,7 +63,7 @@ function App() {
             {data[0].users.map((user, userIndex) =>
               draggableDiv(user, userIndex),
             )}
-            <AddClient />
+            <AddClient setData={setData} />
           </div>
         </div>
         <div className='weekdays'>
@@ -77,7 +77,7 @@ function App() {
                 >
                   <p>{group.title}</p>
                   {group.users.map((user, userIndex) =>
-                    draggableDiv(user, userIndex),
+                    draggableDiv(user, userIndex, groupIndex),
                   )}
                 </div>
               )

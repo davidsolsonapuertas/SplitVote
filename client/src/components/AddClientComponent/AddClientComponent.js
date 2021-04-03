@@ -4,13 +4,17 @@ import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
 
 import './AddClientComponent.css';
 import AddProfilePicComponent from '../AddProfilePicComponent/AddProfilePicComponent';
+import { addUser } from '../../service/ModifyDataService';
 
-function AddClient() {
+const initialFormData = {
+  name: '',
+  pet: '',
+};
+
+function AddClient({ setData }) {
   const [addCardOpen, setAddCardOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    pet: '',
-  });
+  const [formData, setFormData] = useState(initialFormData);
+  const [picture, setPicture] = useState({});
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,36 +22,47 @@ function AddClient() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formData.name.length && formData.pet.length) {
+      addUser({ ...formData, picture }, setData);
+      setFormData(initialFormData);
+      setPicture({});
+    }
   };
 
   return (
     <div>
       <div className='card'>
-        <div className='cardbody addclient'>
+        <div className='addclient'>
           {addCardOpen ? (
             <div className='addUserCard'>
-              <div className='icondiv' onClick={() => setAddCardOpen(false)}>
-                <ClearRoundedIcon fontSize='large' className='icon' />
+              <div>
+                <ClearRoundedIcon
+                  fontSize='large'
+                  className='icon'
+                  onClick={() => setAddCardOpen(false)}
+                />
               </div>
-              <AddProfilePicComponent />
-              <form className='inputField'>
-                <label className='inputField'>
-                  <p>Name</p>
-                  <input
-                    onChange={handleChange}
-                    name='name'
-                    value={formData.name}
-                  />
-                </label>
-                <label className='inputField'>
-                  <p>Pet</p>
-                  <input
-                    onChange={handleChange}
-                    name='pet'
-                    value={formData.pet}
-                  />
-                </label>
-                <button onClick={handleSubmit}>Submit</button>
+              <AddProfilePicComponent
+                setPicture={setPicture}
+                picture={picture}
+              />
+              <form className='inputFields'>
+                <input
+                  onChange={handleChange}
+                  name='name'
+                  placeholder='Name'
+                  value={formData.name}
+                />
+
+                <input
+                  onChange={handleChange}
+                  name='pet'
+                  placeholder='Pet type'
+                  value={formData.pet}
+                />
+                <button className='outlineNone' onClick={handleSubmit}>
+                  Add
+                </button>
               </form>
             </div>
           ) : (

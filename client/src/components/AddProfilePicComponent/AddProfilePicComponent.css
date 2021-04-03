@@ -5,16 +5,23 @@
   align-items: center;
   text-align: center;
   background-color: rgb(201, 201, 201);
-  border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  cursor: pointer;
+  outline: 0;
 }
 
 .uploadProfilePic:hover {
-  background-color: #444;
+  background-color: rgb(129, 129, 129);
 }
 
 .uploadPicIcon {
   color: rgb(0, 0, 0);
   margin: -3px;
+}
+
+.outlineNone {
+  outline: none;
+}
+
+.uploadProfilePic:hover {
+  filter: grayscale(var(--value, 100%));
 }

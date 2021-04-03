@@ -1,14 +1,36 @@
+input {
+  font-family: inherit;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 2px solid rgb(182, 182, 182);
+  background: transparent;
+  outline: 0;
+  margin: 10px;
+}
+
 .addUserText {
   font-size: 10px;
   color: white;
 }
 
-.inputField {
+.inputFields {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin-bottom: 15px;
+}
+
+.inputFields button {
+  margin-top: 15px;
+  font-family: inherit;
+  border: 0;
+  border-radius: 20px;
+  background-color: transparent;
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+  background-color: #ff4d41;
 }
 
 .addUserCard {

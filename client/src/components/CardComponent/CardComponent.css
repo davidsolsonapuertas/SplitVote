@@ -1,3 +1,7 @@
+img {
+  z-index: 0;
+}
+
 .addclient .iconplus {
   color: #ff4d41;
   font-size: 70;
@@ -10,6 +14,7 @@
 .icon {
   float: right;
   color: rgb(150, 150, 150);
+  cursor: pointer;
 }
 
 .card {

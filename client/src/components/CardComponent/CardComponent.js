@@ -7,17 +7,19 @@ import './CardComponent.css';
 function Card({ user, setData }) {
   return (
     <div draggable key={user.username} className='card'>
-      <div
-        className='icondiv'
-        onClick={() => deleteUser(user.username, setData)}
-      >
-        <ClearRoundedIcon fontSize='large' className='icon' />
+      <div>
+        <ClearRoundedIcon
+          fontSize='large'
+          className='icon'
+          onClick={() => deleteUser(user.username, setData)}
+        />
       </div>
       <div className='cardbody'>
         <img
-          src={`http://localhost:5000/static/${user.picture}`}
+          src={user.picture}
           className='profilepic'
           alt={user.username}
+          draggable={false}
         />
         <div className='cardinfo'>
           <h2>{user.username}</h2>
