@@ -1,7 +1,8 @@
 import React from 'react';
 import ClearRoundedIcon from '@material-ui/icons/ClearRounded';
 
-import { deleteUser } from '../service/ModifyDataService';
+import { deleteUser } from '../../service/ModifyDataService';
+import './CardComponent.css';
 
 function Card({ user, setData }) {
   return (

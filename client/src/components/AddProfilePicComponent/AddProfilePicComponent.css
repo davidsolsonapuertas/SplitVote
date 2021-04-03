@@ -1,0 +1,20 @@
+.uploadProfilePic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(201, 201, 201);
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+}
+
+.uploadProfilePic:hover {
+  background-color: #444;
+}
+
+.uploadPicIcon {
+  color: rgb(0, 0, 0);
+  margin: -3px;
+}

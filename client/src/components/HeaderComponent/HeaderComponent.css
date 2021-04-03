@@ -1,0 +1,15 @@
+.header {
+  background-color: #ff4d41;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: white;
+}
+
+.headericon {
+  color: white;
+  margin-right: 20px;
+}

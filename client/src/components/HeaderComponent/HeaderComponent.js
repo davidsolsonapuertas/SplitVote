@@ -1,7 +1,8 @@
 import React from 'react';
-
-import logo from '../assets/logo.png';
 import NotesRoundedIcon from '@material-ui/icons/NotesRounded';
+
+import logo from '../../assets/logo.png';
+import './HeaderComponent.css';
 
 function Header() {
   return (

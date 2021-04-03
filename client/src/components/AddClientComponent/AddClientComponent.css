@@ -1,0 +1,17 @@
+.addUserText {
+  font-size: 10px;
+  color: white;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.addUserCard {
+  display: flex;
+  flex-direction: column;
+}

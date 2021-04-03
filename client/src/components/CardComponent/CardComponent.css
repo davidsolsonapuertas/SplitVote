@@ -1,0 +1,42 @@
+.addclient .iconplus {
+  color: #ff4d41;
+  font-size: 70;
+}
+
+.cardinfo {
+  text-align: center;
+}
+
+.icon {
+  float: right;
+  color: rgb(150, 150, 150);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px 15px 15px 15px;
+  border: 1px solid #444;
+  color: black;
+}
+
+.cardbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilepic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.margintop40 {
+  margin-top: 40px;
+}

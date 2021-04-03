@@ -1,9 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
 
 import './App.css';
-import Card from './components/CardComponent';
-import AddClient from './components/AddClientComponent';
-import Header from './components/HeaderComponent';
+import Card from './components/CardComponent/CardComponent';
+import AddClient from './components/AddClientComponent/AddClientComponent';
+import Header from './components/HeaderComponent/HeaderComponent';
 import mockdata from './mockdata';
 import { moveItem } from './service/ModifyDataService';
 
@@ -59,7 +59,7 @@ function App() {
       <div className='dashboard'>
         <div>
           <h2>Users selling now</h2>
-          <div className='unordered' onDragEnter={(e) => onDragEnter(0)}>
+          <div className='unordered' onDragEnter={() => onDragEnter(0)}>
             {data[0].users.map((user, userIndex) =>
               draggableDiv(user, userIndex),
             )}
@@ -73,7 +73,7 @@ function App() {
                 <div
                   key={group.title}
                   className='weekday'
-                  onDragEnter={(e) => onDragEnter(groupIndex)}
+                  onDragEnter={() => onDragEnter(groupIndex)}
                 >
                   <p>{group.title}</p>
                   {group.users.map((user, userIndex) =>

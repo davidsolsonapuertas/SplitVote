@@ -1,5 +1,4 @@
-/* #ff4d41 */
-p,
+#ff4d41 p,
 h1,
 h2,
 h3 {
@@ -12,22 +11,6 @@ h3 {
 .App {
   max-width: 100%;
   overflow-x: hidden;
-}
-
-.header {
-  background-color: #ff4d41;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header h1 {
-  color: white;
-}
-
-.headericon {
-  color: white;
-  margin-right: 20px;
 }
 
 .dashboard {
@@ -77,49 +60,6 @@ h3 {
 .weekday p {
   margin-top: 10px;
   color: white;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  min-height: 300px;
-  min-width: 200px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 20px 15px 15px 15px;
-  border: 1px solid #444;
-  color: black;
-}
-
-.cardbody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profilepic {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.addclient {
-  margin-top: 40px;
-}
-
-.addclient .iconplus {
-  color: #ff4d41;
-  font-size: 70;
-}
-
-.cardinfo {
-  text-align: center;
-}
-
-.icon {
-  float: right;
-  color: rgb(150, 150, 150);
 }
 
 .dragging {
