@@ -81,30 +81,37 @@ function Dashboard() {
             <AddClient setData={setData} />
           </div>
         </div>
-        <div className='weekdays'>
-          {data.map((group, groupIndex) => {
-            return (
-              groupIndex !== 0 && (
-                <div
-                  key={group.title}
-                  className={
-                    group.users.length > 1 ? 'weekday' : 'weekday oneUser'
-                  }
-                  onDragEnter={() => onDragEnter(groupIndex)}
-                >
-                  <p>{group.title}</p>
-                  <div className='weekdayUsers'>
-                    {group.users.map((user, userIndex) =>
-                      draggableDiv(user, userIndex, groupIndex),
-                    )}
+        <div className='weekdaysDashboard'>
+          <h2>Current bookings</h2>
+          <p>
+            Would you like to adopt a new pet? Book a slot with pet owners by
+            dragging and dropping their profiles in the boxes below!
+          </p>
+          <div className='weekdays'>
+            {data.map((group, groupIndex) => {
+              return (
+                groupIndex !== 0 && (
+                  <div
+                    key={group.title}
+                    className={
+                      group.users.length > 1 ? 'weekday' : 'weekday oneUser'
+                    }
+                    onDragEnter={() => onDragEnter(groupIndex)}
+                  >
+                    <p>{group.title}</p>
+                    <div className='weekdayUsers'>
+                      {group.users.map((user, userIndex) =>
+                        draggableDiv(user, userIndex, groupIndex),
+                      )}
+                    </div>
                   </div>
-                </div>
-              )
-            );
-          })}
-          <div className='sendDiv' onClick={bookAppointment}>
-            <SendRoundedIcon className='sendIcon' style={{ fontSize: 80 }} />
-            <p>Book your appointment!</p>
+                )
+              );
+            })}
+            <div className='sendDiv' onClick={bookAppointment}>
+              <SendRoundedIcon className='sendIcon' style={{ fontSize: 80 }} />
+              <p>Book your appointment!</p>
+            </div>
           </div>
         </div>
       </div>

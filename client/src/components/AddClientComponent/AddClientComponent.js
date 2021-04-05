@@ -61,16 +61,15 @@ function AddClient({ setData }) {
                   value={formData.pet}
                 />
                 <button className='outlineNone' onClick={handleSubmit}>
-                  Add
+                  Add user
                 </button>
               </form>
             </div>
           ) : (
-            <div className='cardinfo'>
+            <div className='cardinfo' onClick={() => setAddCardOpen(true)}>
               <AddCircleRoundedIcon
                 className='iconplus margintop40'
                 style={{ fontSize: 90 }}
-                onClick={() => setAddCardOpen(true)}
               />
               <h2>Add user</h2>
             </div>

@@ -3,6 +3,7 @@ import NotesRoundedIcon from '@material-ui/icons/NotesRounded';
 
 import logo from '../../assets/logo.png';
 import './HeaderComponent.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -10,8 +11,10 @@ function Header() {
       <a href='/'>
         <img src={logo} className='logoheader' alt='Split pets logo' href='/' />
       </a>
-      <h1>HOME</h1>
-      <NotesRoundedIcon className='headericon' fontSize='large' />
+      <Link to='/'>
+        <h1>HOME</h1>
+      </Link>
+      <NotesRoundedIcon className='headericon icon' fontSize='large' />
     </div>
   );
 }
