@@ -36,5 +36,6 @@ These instruction will help you setup a local development instance of the app.
 To run the tests in the 'tests' folder, follow these steps:
 
 1. Enter the directory with `cd client`
-2. Run `npm t`
-3. Press `a`
+2. Install the required dependencies by running `npm install`
+3. Run `npm test`
+4. Press `a`
