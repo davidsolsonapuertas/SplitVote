@@ -29,6 +29,10 @@ img {
   color: black;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .cardbody {
   display: flex;
   flex-direction: column;

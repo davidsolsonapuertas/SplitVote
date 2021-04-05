@@ -64,7 +64,7 @@ function Dashboard() {
     });
 
     if (atLeastOneUserBooked) {
-      history.push('/booked');
+      history.push('/successfulbooking');
     }
   };
 
@@ -87,7 +87,9 @@ function Dashboard() {
               groupIndex !== 0 && (
                 <div
                   key={group.title}
-                  className='weekday'
+                  className={
+                    group.users.length > 1 ? 'weekday' : 'weekday oneUser'
+                  }
                   onDragEnter={() => onDragEnter(groupIndex)}
                 >
                   <p>{group.title}</p>

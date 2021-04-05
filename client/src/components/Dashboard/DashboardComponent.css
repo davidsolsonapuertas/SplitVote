@@ -44,6 +44,13 @@
   min-height: 200px;
 }
 
+.oneUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .weekdayUsers {
   display: flex;
   overflow-x: auto;
@@ -51,7 +58,7 @@
   flex-wrap: nowrap;
   white-space: nowrap;
   flex: 0 0 auto;
-  padding: 16px;
+  padding: 0 16px 16px 16px;
 }
 
 .weekdayUsers > * {
@@ -71,9 +78,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 210px;
+  width: 280px;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
 }
 

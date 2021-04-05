@@ -1,6 +1,9 @@
 import React from 'react';
-import Dashboard from './components/DashboardComponent/DashboardComponent';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import './App.css';
+import Dashboard from './components/Dashboard/DashboardComponent';
+import SuccessfulBookingComponent from './components/SuccessfulBookingComponent/SuccessfulBookingComponent';
 
 function App() {
   return (
@@ -9,7 +12,9 @@ function App() {
         <Route exact path='/'>
           <Dashboard />
         </Route>
-        <Route path='/book'>{/* <About /> */}</Route>
+        <Route path='/successfulbooking'>
+          <SuccessfulBookingComponent />
+        </Route>
       </Switch>
     </Router>
   );
