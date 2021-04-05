@@ -10,7 +10,7 @@ SplitPets is built in React.
 
 ### Previews
 
-<img src="./screenshots/screenshot1" alt="Screenshot" style="zoom:25%;" />
+<img src="https://github.com/davidsolsonapuertas/SplitVote/blob/master/screenshot/screenshot1.png" alt="Screenshot" style="zoom:25%;" />
 
 ### Getting started
 
